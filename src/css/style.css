@@ -15,6 +15,12 @@ body {
 .text-muted {
   color: #B9B9B9; }
 
+.hsd-rounded {
+  border-radius: 0.5rem; }
+
+.hsd-border {
+  border: 1px solid #E1E1E1; }
+
 .badge {
   padding: 5px 2px;
   width: 24px;
@@ -43,115 +49,136 @@ body {
 .requirements {
   padding: .5rem 1.25rem;
   margin: 1rem 0;
-  border-radius: 0.5rem; }
+  color: #7A7A7A; }
 
 .requirements-dropdown {
   margin: 0 1.25rem 0 0;
   padding: 0 1.25rem 0 0;
-  color: #7A7A7A; }
+  border-right: 1px solid #E1E1E1; }
   .requirements-dropdown .btn-group {
     margin: 0 0 0 1.25rem;
-    background: #fff;
-    border-radius: 0.5rem;
-    text-align: left; }
-    .requirements-dropdown .btn-group .btn,
-    .requirements-dropdown .btn-group .btn:focus {
+    position: relative; }
+    .requirements-dropdown .btn-group .btn {
       font-size: 12px;
-      outline: none;
-      box-shadow: none; }
-      .requirements-dropdown .btn-group .btn:first-child,
-      .requirements-dropdown .btn-group .btn:focus:first-child {
+      color: #7A7A7A;
+      border: 1px solid #E1E1E1;
+      border-radius: 0.5rem; }
+      .requirements-dropdown .btn-group .btn:first-child {
         min-width: 250px;
-        border-right: none; }
-      .requirements-dropdown .btn-group .btn:last-child,
-      .requirements-dropdown .btn-group .btn:focus:last-child {
-        border-left: none; }
-    .requirements-dropdown .btn-group .btn > i {
-      color: #7A7A7A; }
-
-.card {
-  border-radius: 0.5rem; }
-  .card .card-header {
-    padding: 0.75rem 0.5rem 0.5rem;
-    background: none;
-    border-bottom: none; }
-  .card .card-body {
-    padding: 0.5rem; }
-  .card .card-title {
-    font-size: 14px;
-    font-weight: bolder;
-    text-transform: uppercase; }
-  .card .card-subtitle {
-    font-size: 12px;
-    font-weight: lighter; }
-  .card .list-group > li {
-    margin: 2px 0;
-    border-style: dashed;
-    border-radius: 0.5rem;
-    background: #fff;
-    color: #B9B9B9;
-    font-size: 12px; }
-    .card .list-group > li.course {
-      border-style: solid;
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem; }
-      .card .list-group > li.course .course-name,
-      .card .list-group > li.course .course-abbr {
+        border-right-width: 0; }
+      .requirements-dropdown .btn-group .btn.dropdown-toggle {
+        border-radius: 0 0.5rem 0.5rem 0;
+        border-left-width: 0; }
+        .requirements-dropdown .btn-group .btn.dropdown-toggle:after {
+          display: none; }
+      .requirements-dropdown .btn-group .btn > i {
+        color: #E1E1E1;
+        transition: transform 0.1s; }
+      .requirements-dropdown .btn-group .btn:focus {
+        outline: none;
+        box-shadow: none; }
+    .requirements-dropdown .btn-group .dropdown-menu {
+      top: 34px !important;
+      left: 0;
+      transform: none !important; }
+      .requirements-dropdown .btn-group .dropdown-menu > a {
+        padding: .375rem .75rem;
+        font-size: 12px;
         color: #7A7A7A; }
-      .card .list-group > li.course .course-category {
-        color: #B9B9B9; }
-      .card .list-group > li.course .badge {
-        width: 16px;
-        height: 16px;
-        font-size: 11px;
-        padding: 2px;
-        cursor: pointer; }
-    .card .list-group > li.available {
-      display: flex;
-      padding: 0 1.25rem 0 0; }
-      .card .list-group > li.available .course-label {
-        padding: 0.25rem 1.25rem; }
-      .card .list-group > li.available .btn-add {
-        margin: -1px;
-        float: left;
-        color: #fff;
-        border-radius: 0.5rem 0 0 0.5rem; }
-        .card .list-group > li.available .btn-add:focus, .card .list-group > li.available .btn-add:active {
-          box-shadow: none; }
-      .card .list-group > li.available .course-label .course-name {
-        display: block;
-        text-decoration: none;
-        color: #2A79AE; }
-  .card .course {
-    border-left: 8px solid #85C623; }
-    .card .course-name, .card .course-abbr {
-      color: #484848; }
-    .card .course-category, .card .course-credit {
-      font-size: 10px; }
-    .card .course-abbr {
-      padding: 0 0.5rem 0 0;
-      margin: 0.5rem 0.5rem 0.5rem 0;
-      border-right: 1px solid #E1E1E1; }
-  .card .card-footer {
-    text-align: center; }
-    .card .card-footer .btn {
-      font-size: 16px;
-      font-weight: lighter;
+    .requirements-dropdown .btn-group.show .dropdown-toggle > i {
+      margin-top: -2px;
+      transform: rotate(180deg); }
+
+.card .card-header {
+  padding: 0.75rem 0.5rem 0.5rem;
+  background: none;
+  border-bottom: none; }
+
+.card .card-body {
+  padding: 0.5rem; }
+
+.card .card-title {
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: uppercase; }
+
+.card .card-subtitle {
+  font-size: 12px;
+  font-weight: lighter; }
+
+.card .list-group > li {
+  margin: 2px 0;
+  border: 1px dashed #E1E1E1;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #B9B9B9;
+  font-size: 12px; }
+  .card .list-group > li.course {
+    border-style: solid;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem; }
+    .card .list-group > li.course .course-name,
+    .card .list-group > li.course .course-abbr {
+      color: #7A7A7A; }
+    .card .list-group > li.course .course-category {
+      color: #B9B9B9; }
+    .card .list-group > li.course .badge {
+      width: 16px;
+      height: 16px;
+      font-size: 11px;
+      padding: 2px 4px;
+      border: 1px solid #484848;
+      cursor: pointer; }
+  .card .list-group > li.available {
+    display: flex;
+    padding: 0 1.25rem 0 0; }
+    .card .list-group > li.available .course-label {
+      padding: 0.5rem 1.25rem;
+      line-height: 1em; }
+    .card .list-group > li.available .btn-add {
+      margin: -1px;
+      float: left;
+      color: #fff;
+      border-radius: 0.5rem 0 0 0.5rem; }
+      .card .list-group > li.available .btn-add:focus, .card .list-group > li.available .btn-add:active {
+        box-shadow: none; }
+    .card .list-group > li.available .course-label .course-name {
+      display: block;
+      text-decoration: none;
+      color: #2A79AE; }
+
+.card .course {
+  border-left: 8px solid #85C623; }
+  .card .course-name, .card .course-abbr {
+    color: #484848; }
+  .card .course-category, .card .course-credit {
+    font-size: 10px; }
+  .card .course-abbr {
+    padding: 0 0.5rem 0 0;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border-right: 1px solid #E1E1E1; }
+
+.card .card-footer {
+  text-align: center; }
+  .card .card-footer .btn {
+    font-size: 16px;
+    font-weight: lighter;
+    border: 1px solid #2A79AE;
+    background: #2A79AE;
+    position: relative; }
+    .card .card-footer .btn:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       border-radius: 0.5rem;
-      border: 1px solid #2A79AE;
-      background: #2A79AE;
-      position: relative; }
-      .card .card-footer .btn:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border-radius: 0.5rem;
-        border: 1px solid #46AEDE; }
-  .card:not(.active) {
-    border: none;
-    background: none; }
-  .card.active .card-header {
-    background: #F1F1F1; }
+      border: 1px solid #46AEDE; }
+
+.card:not(.active) {
+  border: none;
+  background: none; }
+
+.card.active .card-header {
+  background: #F1F1F1; }

@@ -9,7 +9,6 @@
   "author": "Julianna Gevchuk",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.1.1",
     "gulp-sass": "^4.0.1",
     "popper.js": "^1.14.3"
   },

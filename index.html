@@ -10,10 +10,12 @@
 
   <title>Xello Bootstrap Technical Task</title>
 
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/solid.css" integrity="sha384-Rw5qeepMFvJVEZdSo1nDQD5B6wX0m7c5Z/pLNvjkB14W6Yki1hKbSEQaX9ffUbWe"
     crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV"
     crossorigin="anonymous">
 
@@ -55,18 +57,17 @@
       </div>
     </nav>
 
-    <div class="requirements bg-gray border rounded">
+    <div class="requirements bg-gray hsd-border hsd-rounded">
       <div class="d-flex justify-content-start align-items-center">
         <div class="requirements-dropdown dropdown">
           Requirements
-          <div class="btn-group border rounded">
+          <div class="btn-group">
             <button class="btn text-left" type="button">
               Show All
             </button>
 
             <button 
-              type="button" 
-              class="btn" 
+              class="btn dropdown-toggle" 
               id="dropdown-link"
               data-toggle="dropdown" 
               aria-haspopup="true"
@@ -74,6 +75,14 @@
             >
               <i class="fas fa-chevron-down"></i>
             </button>
+
+            <div class="dropdown-menu hsd-border hsd-rounded" aria-labelledby="dropdown-link">
+              <a class="dropdown-item" href="#">Earned</a>
+
+              <a class="dropdown-item" href="#">Planned</a>
+
+              <a class="dropdown-item" href="#">Remaining</a>
+            </div>
           </div>
         </div>
 
@@ -107,7 +116,7 @@
     <div class="cards">
       <div class="row">
         <div class="col-sm-3">
-          <div class="card border rounded active">
+          <div class="card hsd-border hsd-rounded active">
             <div class="card-header bg-gray">
               <h5 class="card-title">Year 9 (next year)</h5>
         
@@ -138,6 +147,13 @@
                       class="badge float-right"
                       data-toggle="tooltip"
                       data-placement="top"
+                      data-html="true"
+                      title="<div class='tooltip'>
+                        <span class='tooltip-title'>
+                          This course requires prerequisite
+                        </span>
+                        <a href='#'>Add one</a>
+                      </div>"
                     >!
                     </span>
                   </div>
@@ -206,7 +222,7 @@
             </div>
         
             <div class="card-footer bg-blue">
-              <a href="#" class="btn btn-lg text-white">
+              <a href="#" class="btn btn-lg text-white hsd-rounded">
                 Ready To Submit
               </a>
             </div>
@@ -214,7 +230,7 @@
         </div>
         
         <div class="col-sm-3">
-          <div class="card border rounded">
+          <div class="card">
             <div class="card-header">
               <h5 class="card-title">Year 10</h5>
         
@@ -237,7 +253,7 @@
         </div>
         
         <div class="col-sm-3">
-          <div class="card border rounded">
+          <div class="card">
             <div class="card-header">
               <h5 class="card-title">Year 11</h5>
         
@@ -260,7 +276,7 @@
         </div>
         
         <div class="col-sm-3">
-          <div class="card border rounded">
+          <div class="card">
             <div class="card-header">
               <h5 class="card-title">Year 12</h5>
         
@@ -285,9 +301,14 @@
     </div>
   </div>
 
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
 
 </body>
 
