@@ -1,0 +1,20 @@
+{
+  "name": "xello_bootstrap_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julianna Gevchuk",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "gulp-sass": "^4.0.1",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "jquery": "^3.3.1"
+  }
+}

@@ -1,0 +1,247 @@
+$main-text-color: #484848;
+$secondary-text-color: #7A7A7A;
+$muted-text-color: #B9B9B9;
+$border-color: #E1E1E1;
+$light-gray: #FAFAFA;
+$gray: #F1F1F1;
+$green: #85C623;
+$red : #CB355C;
+$light-blue: #46AEDE;
+$blue: #2A79AE;
+
+body {
+  background: $light-gray;
+  font-size: 12px;
+  color: $main-text-color;
+}
+
+.bg-gray {
+  background: $gray;
+}
+
+.bg-l-gray {
+  background: $light-gray;
+}
+
+.bg-blue {
+  background: $light-blue;
+}
+
+.text-muted {
+  color: $muted-text-color;
+}
+
+.badge {
+  padding: 5px 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: $red;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.navbar {
+  padding-left: 0;
+  padding-right: 0;
+
+  .navbar-brand {
+    font-size: 22px;
+    color: $main-text-color;
+    text-decoration: none;
+  }
+
+  .navbar-right {
+    clear: both;
+  }
+
+  .progress {
+    margin-right: 0.5rem;
+    border: 1px solid $border-color;
+    float: left;
+  }
+}
+
+.requirements {
+  padding: .5rem 1.25rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  color: $secondary-text-color;
+}
+
+.requirements-dropdown {
+  margin: 0 1.25rem 0 0;
+  padding: 0 1.25rem 0 0;
+
+  .btn-group {
+    margin: 0 0 0 1.25rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    text-align: left;
+
+    .btn,
+    .btn:focus {
+      font-size: 12px;
+      outline: none;
+      box-shadow: none;
+      color: $secondary-text-color;
+
+      &:first-child {
+        min-width: 250px;
+        border-right: none;
+      }
+
+      &:last-child {
+        border-left: none;
+      }
+    }
+
+    .btn > i {
+      color: $border-color;
+    }
+  }
+}
+
+.card {
+  border-radius: 0.5rem;
+
+  .card-header {
+    padding: 0.75rem 0.5rem 0.5rem;
+    background: none;
+    border-bottom: none;
+  }
+
+  .card-body {
+    padding: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  .list-group > li {
+    margin: 2px 0;
+    border-style: dashed;
+    border-radius: 0.5rem;
+    background: #fff;
+    color: $muted-text-color;
+    font-size: 12px;
+
+    &.course {
+      border-style: solid;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+
+      .course-name,
+      .course-abbr {
+        color: $secondary-text-color;
+      }
+
+      .course-category {
+        color: $muted-text-color;
+      }
+
+      .badge {
+        width: 16px;
+        height: 16px;
+        font-size: 11px;
+        padding: 2px;
+        cursor: pointer;
+      }
+    }
+
+    &.available {
+      display: flex;
+      padding: 0 1.25rem 0 0;
+
+      .course-label {
+        padding: 0.25rem 1.25rem;
+      }
+
+      .btn-add {
+        margin: -1px;
+        float: left;
+        color: #fff;
+        border-radius: 0.5rem 0 0 0.5rem;
+
+        &:focus,
+        &:active {
+          box-shadow: none;
+        }
+      }
+
+      .course-label {
+        .course-name {
+          display: block;
+          text-decoration: none;
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .course {
+    border-left: 8px solid $green;
+
+    &-name,
+    &-abbr {
+      color: $main-text-color;
+    }
+
+    &-category,
+    &-credit {
+      font-size: 10px;
+    }
+
+    &-abbr {
+      padding: 0 0.5rem 0 0;
+      margin: 0.5rem 0.5rem 0.5rem 0;
+      border-right: 1px solid $border-color;
+    }
+  }
+
+  .card-footer {
+    text-align: center;
+
+    .btn {
+      font-size: 16px;
+      font-weight: lighter;
+      border-radius: 0.5rem;
+      border: 1px solid $blue;
+      background: $blue;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 0.5rem;
+        border: 1px solid $light-blue;
+      }
+    }
+  }
+
+  &:not(.active) {
+    border: none;
+    background: none;
+  }
+
+  &.active {
+
+    .card-header {
+      background: $gray;
+    }
+  }
+}

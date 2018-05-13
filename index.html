@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Xello Bootstrap Technical Task</title>
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/solid.css" integrity="sha384-Rw5qeepMFvJVEZdSo1nDQD5B6wX0m7c5Z/pLNvjkB14W6Yki1hKbSEQaX9ffUbWe"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV"
+    crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="src/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a class="navbar-brand" href="#">
+          High-School Diploma 2017
+        </a>
+
+        <span class="text-muted">
+          <span class="badge">14</span>
+          Credits left!
+        </span>
+      </div>
+       
+      <div class="navbar-right">
+        <div class="progress">
+          <div 
+            class="progress-bar bg-success" 
+            role="progressbar" 
+            style="width: 98px"
+            aria-valuemin="0" 
+            aria-valuenow="14" 
+            aria-valuemax="30"
+          >
+          </div>
+        </div>
+
+        <span class="progress-label">
+          14/30
+        </span>
+      </div>
+    </nav>
+
+    <div class="requirements bg-gray border rounded">
+      <div class="d-flex justify-content-start align-items-center">
+        <div class="requirements-dropdown dropdown">
+          Requirements
+          <div class="btn-group border rounded">
+            <button class="btn text-left" type="button">
+              Show All
+            </button>
+
+            <button 
+              type="button" 
+              class="btn" 
+              id="dropdown-link"
+              data-toggle="dropdown" 
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="requirements-checkboxes">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="all" type="checkbox" value="All">
+      
+            <label class="form-check-label" for="all">All</label>
+          </div>
+      
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="earned" type="checkbox" value="Earned">
+      
+            <label class="form-check-label" for="earned">Earned</label>
+          </div>
+      
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="planned" type="checkbox" value="Planned">
+      
+            <label class="form-check-label" for="planned">Planned</label>
+          </div>
+      
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="remaining" type="checkbox" value="Remaining">
+            <label class="form-check-label" for="remaining">Remaining</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card border rounded active">
+            <div class="card-header bg-gray">
+              <h5 class="card-title">Year 9 (next year)</h5>
+        
+              <h6 class="card-subtitle text-muted">1 credit planned</h6>
+            </div>
+        
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item course">
+                  <div class="course-name">English</div>
+
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <span class="course-abbr">ENG1Pl</span>
+                    
+                      <span class="course-category">English 9</span>
+                    </div>
+                    
+                    <span class="course-credit float-right">1 cr.</span>
+                  </div>
+                </li>
+
+                <li class="list-group-item course">
+                  <div class="clearfix">
+                    <div class="course-name float-left">Functions</div>
+
+                    <span 
+                      class="badge float-right"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                    >!
+                    </span>
+                  </div>
+                
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <span class="course-abbr">MAT1U1</span>
+                
+                      <span class="course-category">Math 9</span>
+                    </div>
+                
+                    <span class="course-credit float-right">1 cr.</span>
+                  </div>
+                </li>
+
+                <li class="list-group-item available">
+                  <button type="button" class="btn-add btn bg-blue">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                  
+                  <div class="course-label">
+                    <a class="course-name" href="#">Add Science 9</a>
+                  
+                    <span class="course-credit">1 cr.</span>
+                  </div>
+                </li>
+
+                <li class="list-group-item available">
+                  <button type="button" class="btn-add btn bg-blue">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                
+                  <div class="course-label">
+                    <a class="course-name" href="#">Add Geography</a>
+                
+                    <span class="course-credit">1 cr.</span>
+                  </div>
+                </li>
+
+                <li class="list-group-item available">
+                  <button type="button" class="btn-add btn bg-blue">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                
+                  <div class="course-label">
+                    <a class="course-name" href="#">Add Frehcn</a>
+                
+                    <span class="course-credit">1 cr.</span>
+                  </div>
+                </li>
+
+                <li class="list-group-item available">
+                  <button type="button" class="btn-add btn bg-blue">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                
+                  <div class="course-label">
+                    <a class="course-name" href="#">Add Elective</a>
+                
+                    <span class="course-credit">16 cr.</span>
+                  </div>
+                </li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+              </ul>
+            </div>
+        
+            <div class="card-footer bg-blue">
+              <a href="#" class="btn btn-lg text-white">
+                Ready To Submit
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="card border rounded">
+            <div class="card-header">
+              <h5 class="card-title">Year 10</h5>
+        
+              <h6 class="card-subtitle text-muted">0 credit earned</h6>
+            </div>
+        
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="card border rounded">
+            <div class="card-header">
+              <h5 class="card-title">Year 11</h5>
+        
+              <h6 class="card-subtitle text-muted">0 credit earned</h6>
+            </div>
+        
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="card border rounded">
+            <div class="card-header">
+              <h5 class="card-title">Year 12</h5>
+        
+              <h6 class="card-subtitle text-muted">0 credit earned</h6>
+            </div>
+        
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+                <li class="list-group-item">Available Slot</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
